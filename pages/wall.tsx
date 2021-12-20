@@ -5,9 +5,10 @@ import { useTranslation } from 'next-i18next'
 
 import { Typography } from '@ui/Typography'
 import { Layout } from '@components/Layout'
+import { AccessDenied } from '@components/AccessDenied'
 import { Comment, CommentProps } from '@components/Wall/Comment'
 import { Editor } from '@components/Wall/Editor'
-import { AccessDenied } from '@components/AccessDenied'
+
 import { getSession, useSession } from '@auth/client'
 
 export const getServerSideProps: GetServerSideProps<{}> = async (context) => {
@@ -34,9 +35,11 @@ export default function WallPage() {
   const [session] = useSession()
   const [stories, setStories] = useState<Story[]>([])
   const { t } = useTranslation(['page-wall'])
-  if (session == null){
-    <AccessDenied></AccessDenied>
+
+  if(session == null){
+    return <AccessDenied/>
   }
+
   const addStory = (text: string) => {
     const message = text.trim()
 
@@ -52,6 +55,10 @@ export default function WallPage() {
     }
 
     setStories((previousStories) => [newStory, ...previousStories])
+  }
+
+  if (session == null) {
+    return <AccessDenied />
   }
 
   return (

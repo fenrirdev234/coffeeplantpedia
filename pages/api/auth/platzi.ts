@@ -1,24 +1,22 @@
-import { NextApiHandler } from 'next'
+import { NextApiHandler } from "next-auth/internals/utils"
 
-const credentialsAuth: NextApiHandler<User> = (request, response) => {
-  if (request.method !== 'POST') {
-    // Not supported method
+const credentialAuth: NextApiHandler = (request, response) => { 
+  // Get or any not Ok
+  if(request.method !== 'POST'){
     response.status(405).end()
   }
 
-  if (request.body.password === process.env.AUTH_PLATZI_SECRET) {
-    // How about using another API to randomly generate user's and avatars? :)
+  // POST - Ok
+  // validar credentials
+  if(request.body.password === process.env.AUTH_PLATZI_SECRET){
     const platziUser: User = {
-      name: 'Platzi student',
+      name: 'Platzi Student',
       email: 'student@platzi.com',
-      image: 'platzi.png',
+      image: ''
     }
 
     return response.status(200).json(platziUser)
   }
-
-  // Auth failed
-  response.status(401).end()
 }
 
-export default credentialsAuth
+export default credentialAuth

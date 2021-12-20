@@ -4,5 +4,5 @@ export {
   getSession,
   getCsrfToken,
   signIn,
-  signOut,
+  signOut
 } from 'next-auth/client'

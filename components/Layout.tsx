@@ -4,7 +4,7 @@ import { Footer } from '@components/Footer'
 
 type LayoutProps = { title?: string }
 
-const siteTitle = "Platzi's Plantpedia"
+const siteTitle = "Coffee Plantpedia"
 
 const FOOTER_OFFSET = 450
 
@@ -16,9 +16,9 @@ export const Layout: React.FC<LayoutProps> = ({ children, title }) => {
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link rel="preconnect" href="https://fonts.gstatic.com"></link>
-        <meta property='og:image' content='https://platzi-plantpedia-amber.vercel.app/plantpedia.PNG'/>
+        <meta property='og:image' content='https://coffeeplantpedia.vercel.app/plantpedia.PNG'/>
         <meta property='og:description' content='Plantpedia learning about Server Side Rendering (SSR), Static Side Generation (SSG), Incremental Static Regeneration (ISR)'/>
-        <meta property='og:url' content='https://platzi-plantpedia-amber.vercel.app'/>
+        <meta property='og:url' content='https://coffeeplantpedia.vercel.app'/>
         <noscript id="mui-insertion-point" />
         {/* Google fonts get automatically automized by Next.js: https://nextjs.org/blog/next-10-2#automatic-webfont-optimization */}
         <link

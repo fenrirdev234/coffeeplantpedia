@@ -1,6 +1,7 @@
 import { FormEventHandler, KeyboardEventHandler } from 'react'
 import { useTranslation } from 'next-i18next'
-import sanitizeHTML from 'sanitize-html'
+import sanitizeHtml from 'sanitize-html'
+
 import { Button } from '@ui/Button'
 import { TextField } from '@ui/FormField'
 
@@ -21,13 +22,15 @@ export function Editor({
     if (resetOnSubmit) {
       form.reset()
     }
-    const safeHTML = sanitizeHTML(value, {
-      allowedTags: ['strong', 'a', 'em','b'],
-      allowedAttributes:{
-        a: ['href','target']
-      }
+
+    const safeHtml = sanitizeHtml(value, {
+      allowedTags: ['b', 'i', 'em', 'strong', 'a'],
+      allowedAttributes: {
+        a: ['href', 'target'],
+      },
     })
-    onSubmitCb(safeHTML, form)
+
+    onSubmitCb(safeHtml, form)
   }
 
   const shareStory: FormEventHandler<HTMLFormElement> = (event) => {

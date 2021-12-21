@@ -1,10 +1,10 @@
 import clsx from 'clsx'
-import { useTranslation } from 'next-i18next'
 import { Grid } from '@ui/Grid'
 import { Typography } from '@ui/Typography'
+import { useTranslation } from 'next-i18next';
 
 export const Footer = ({ className }: { className?: string }) => {
-  const { t } = useTranslation(['common'])
+  const { t } = useTranslation(['common']);
 
   return (
     <footer
@@ -23,7 +23,7 @@ export const Footer = ({ className }: { className?: string }) => {
           >
             <PlantpediaLogo />
             <Typography variant="h5" component="a" href="/" title="Go home">
-              Platzi's Plantpedia
+              Plantpedia
             </Typography>
           </Grid>
           <Grid item xs={6} sm={4}>
@@ -47,19 +47,19 @@ export const Footer = ({ className }: { className?: string }) => {
               {t('about')}
             </Typography>
             <p>
-              <a href="https://platzi.com/">{t('aboutDescription')}</a>{' '}
-              <a href="https://twitter.com/jonalvarezz">@jonalvarezz</a>
+              <a href="https://www.facebook.com/carloscorreamillan">Carlos Correa</a>
+              <a href="https://twitter.com/Deadfligth">@Deadfligth</a>
             </p>
             <div className="mt-3">
               <a
-                href="https://twitter.com/jonalvarezz"
-                title="Follow @jonalvarezz on Twitter"
+                href="https://twitter.com/Deadfligth"
+                title="Follow @Carlos Correa on Twitter"
                 className="pr-4"
               >
                 TW
               </a>
               <a
-                href="https://github.com/jonalvarezz"
+                href="https://github.com/Deadflight"
                 title="Open this project on GitHub"
               >
                 GH
@@ -69,14 +69,14 @@ export const Footer = ({ className }: { className?: string }) => {
         </Grid>
         <div className="mt-20 border-t-2 border-gray-600 text-gray-600 pt-6 flex justify-between">
           <p>
-            {t('imagesFrom')}{' '}
+            {t('imagesFrom')} 
             <a target="_blank" href="https://www.pexels.com" title="Pexels">
               Pexels
             </a>
           </p>
           <p>
-            <a target="_blank" href="https://jonalvarezz.com">
-              jonalvarezz.com
+            <a target="_blank" href="https://carloscorreaportfolio.netlify.app/">
+              carloscorrea
             </a>
           </p>
         </div>
@@ -100,7 +100,6 @@ function PlantpediaLogo() {
             left: -40px;
             transform: rotate(120deg);
           }
-
           @media screen and (min-width: 600px) {
             div {
               bottom: 17px;

@@ -8,9 +8,9 @@ import { Button } from '@ui/Button'
 
 import { signIn, signOut, useSession } from '@auth/client'
 
-export function TopArea() {
+export const TopArea = () => {
   return (
-    <Grid container justify="space-between">
+    <Grid container justifyContent="space-between">
       <Grid item>
         <LoginLogout />
       </Grid>

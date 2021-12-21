@@ -4,7 +4,7 @@ import { useTranslation } from 'next-i18next'
 import { NavBar } from '@ui/NavBar'
 import { Button } from '@ui/Button'
 
-import { PreviewModeBanner } from './PreviewModeBanner'
+import PreviewModeBanner from './PreviewModeBanner'
 import { TopArea } from './TopArea'
 
 export function Header() {

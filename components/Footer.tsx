@@ -47,19 +47,18 @@ export const Footer = ({ className }: { className?: string }) => {
               {t('about')}
             </Typography>
             <p>
-              <a href="https://www.facebook.com/carloscorreamillan">Carlos Correa</a>
-              <a href="https://twitter.com/Deadfligth">@Deadfligth</a>
+              <a href="https://twitter.com/CoffeeCirodev">@CoffeeCirodev</a>
             </p>
             <div className="mt-3">
               <a
-                href="https://twitter.com/Deadfligth"
-                title="Follow @Carlos Correa on Twitter"
+                href="https://twitter.com/CoffeeCirodev"
+                title="Follow @CoffeeCirodev on Twitter"
                 className="pr-4"
               >
                 TW
               </a>
               <a
-                href="https://github.com/Deadflight"
+                href="https://github.com/fenrirdev234/coffeeplantpedia"
                 title="Open this project on GitHub"
               >
                 GH
@@ -75,8 +74,8 @@ export const Footer = ({ className }: { className?: string }) => {
             </a>
           </p>
           <p>
-            <a target="_blank" href="https://carloscorreaportfolio.netlify.app/">
-              carloscorrea
+            <a target="_blank" href="https://coffeeciro.vercel.app/">
+            Coffeeciro
             </a>
           </p>
         </div>
